@@ -188,12 +188,8 @@ while True:
                     WALLS.remove(pos)
             elif event.key == pygame.K_r:
                 generate_ramdom_obstacles()
-            elif event.key == pygame.K_s:
-                show_exploration = not show_exploration
-                if show_exploration:
-                    pygame.display.set_caption("A* path finder | Show exploration: ON")
-                else:
-                    pygame.display.set_caption("A* path finder | Show exploration: OFF")
+            elif event.key == pygame.K_ESCAPE:
+                WALLS.clear()
         if event.type == pygame.QUIT:
             exit()
     screen.fill((25, 25, 25))
